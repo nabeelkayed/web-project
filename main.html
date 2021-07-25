@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VOYAGE</title>
+    <link rel="stylesheet" href="c.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.nabeel1').click(function () {
+                dataid = $(this).attr('id');
+                $.ajax({
+                    url: 'map1.php',
+                    type: 'POST',
+                    data: { place3 : dataid }
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-md navbar-light  sticky-top" style="background-color: white">
+    <div class="container-fluid">
+        <a class="navbar-brand"><img src="img/VOYAGE%20(3).jpg" width="200px" height="50px"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active"><a class="nav-link" href="" style="font-family: Monospaced;font-size: 20px">Home</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#hotel" style="font-family: Monospaced ;font-size: 20px"
+                                        id="hotel1">Hotels</a></li>
+                <li class="nav-item"><a class="nav-link" href="#ticket" style="font-family: Monospaced;font-size: 20px">Tickets</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#tours" style="font-family: Monospaced;font-size: 20px">Tours</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#about-us"
+                                        style="font-family: Monospaced;font-size: 20px">About us</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!....video ....!>
+<div id="slides" class="carousel " data-ride="carousel">
+    <ul class="carousel-indicators">
+        <li data-target="#slides" data-slide-to="0" class="active"></li>
+        <li data-target="#slides" data-slide-to="1"></li>
+        <li data-target="#slides" data-slide-to="2"></li>
+    </ul>
+    <div class="carousel-inner">
+        <div class="carousel-item active ">
+            <video src="img/pexels-alvaro-lama-5238450.mp4" autoplay muted loop playsinline
+                   style="height:90ch;"></video>
+            <div class="carousel-caption text-left "><h1 class="display-4" style="margin-top: -600px;">Join us on our
+                journey</h1>
+                <h3>Find out about new places</h3>
+                <a href="#tours">
+                    <button type="button" class="btn btn-outline-light btn-lg">VIEW</button>
+                </a>
+                <ul class="social-icons list-inline text-left">
+                    <li><a href=""><i class="fa fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                    <li><a href=""><i class="fa fa-instagram"></i></a></li>
+                    <li><a href=""><i class="fa fa-google-plus"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <video src="img/production%20ID_4069480.mp4" autoplay muted loop playsinline style="height: 90ch"></video>
+            <div class="carousel-caption text-left " style="color: #ffff09"><h1 class="display-4 "
+                                                                                style="margin-top: -600px;">Find out
+                about the most luxurious hotels
+            </h1>
+                <a href="#hotel">
+                    <button type="button" class="btn btn-outline-light btn-lg"
+                            style="color:#ffff09 ;border-color: #ffff09;">VIEW
+                    </button>
+                </a>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <video src="img/pexels-zlatin-georgiev-5608053.mp4" autoplay muted loop playsinline
+                   style="height: 90ch"></video>
+            <div class="carousel-caption text-left "><h1 class="display-4" style="margin-top: -600px;">Buy your ticket
+                now
+            </h1>
+                <a href="#ticket">
+                    <button type="button" class="btn btn-outline-light btn-lg">VIEW</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<main id="contents" role="main" style="">
+    <section >
+        <div class="container">
+            <div class="row ">
+                <div class="text-center" id="about-us">
+                    <h3>Awesome services</h3>
+
+                    <div id="carouselServices" class="carousel ">
+                        <div class="carousel-inner"></div>
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-md px-md-5">
+                                    <div class="text-dark pb-md-3">
+                                        <i class="fa fa-plane fa-5x"></i>
+                                    </div>
+                                    <h4 class="text-dark">Buy Ticket</h4>
+                                    <br>
+                                    <p class="text-secondary">buy tickets to travel anywhere in the world at the lowest
+                                        costs with the best airlines</p>
+                                </div>
+                                <div class="col-md px-md-5">
+                                    <div class="text-dark pb-md-3">
+                                        <i class="fa fa-hotel fa-5x"></i>
+                                    </div>
+                                    <h4 class="text-dark">Hotel Reservation</h4>
+                                    <br>
+                                    <p class="text-secondary">Reserving a room in the best hotels and the most beautiful
+                                        views</p>
+                                </div>
+                                <div class="col-md px-md-5">
+                                    <div class="text-dark pb-md-3">
+                                        <i class="fa fa-map fa-5x"></i>
+                                    </div>
+                                    <h4 class="text-dark">New adventures</h4>
+                                    <br>
+                                    <p class="text-secondary">New adventures and new locations to discover make you pass
+                                        the best times you will never forget
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</main>
+<hr>
+<div class="carousel-inner" style="margin-top: 0px;margin-bottom: 0px " id="ticket">
+
+    <img src="img/pexels-max-andrey-1254736.jpg " height="700px" width="100%">
+    <div>
+        <div class="container carousel-caption" style="margin-left: -80px"><br>
+            <h2 class="text-center" style="margin-top:-600px "> Buy Ticket</h2> <br>
+            <h3 style="background-color: #c82333;"><i class="fa fa-plane"></i> Flight</h3>
+            <form class="bg-white" method="post" action="tickets.php">
+                <br>
+                <h3 style="color: #c82333;font-size:40px;font-family: Andalus" class="text-center">Travel the world with
+                    us</h3>
+                <div class="row">
+                    <div class="col-md px-md-5 text-left">
+                        <label style="color: #1d2124;font-family: Andalus ;font-size: 30px">From</label>
+                        <input class="input-group" type="text" name="From" placeholder="Departing from" >
+                    </div>
+                    <div class="col-md px-md-5 text-left">
+                        <label style="color: #1d2124; font-family: Andalus ;font-size: 30px">To</label>
+                        <input class="input-group" type="text" name="To" placeholder="Arriving at">
+                    </div>
+                </div>
+                <br><br>
+                <div class="row" style="color: #1d2124;font-family: Andalus ;font-size: 30px">
+                    <div class="col-md px-md-5">
+                        <label>Depart</label>
+                        <input type="date" name="Depart" class="input-group">
+                    </div>
+                    <div class="col-md px-md-5">
+                        <label>Return</label>
+                        <input type="date" name="Return" class="input-group">
+                    </div>
+                    <div class="col-md px-md">
+                        <label>Ticket Type</label>
+
+                        <select class="form-control" class="input-group" name="TicketType"
+                                style="margin-right: 10px;color: #1d2124;font-family: Andalus ;font-size: 23px;border-color: #1d2124">
+                            <option value="Economy">Economy</option>
+                            <option value="Business Class">Business Class</option>
+                            <option value="First Class">First Class</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row"></div>
+                <input type="submit" name="submit" class="btn btn-lg btn-outline-light" value="Search and find dates"
+                       style="color: #c82333 ;border-color: #c82333; margin-top: 50px">
+                <br>
+                <br>
+            </form>
+
+
+        </div>
+    </div>
+
+</div>
+<hr>
+
+<section id="tours">
+    <h1 class="text-center">Tours</h1>
+    <div class="gallery">
+        <div class="container1">
+            <div class="image-gallery">
+                 <a href="Places.php" class="img-1" >
+                    <i >
+                        <!--<ion-icon name="expand-outline" ></ion-icon>-->
+                        <p class="nabeel1" id="Paris">Paris</p>
+                    </i>
+                </a>
+
+                <a href="Places.php" class="img-2">
+                    <i>
+                        <p class="nabeel1" id="NewYork">New York</p>
+                    </i>
+                </a>
+                <a href="Places.php" class="img-3">
+                    <i>
+                        <ion-icon name="expand-outline"></ion-icon>
+                    </i>
+                </a>
+                <a href="Places.php" class="img-4">
+                    <i>
+                        <ion-icon name="expand-outline"></ion-icon>
+                    </i>
+                </a>
+                <a href="Places.php" class="img-5">
+                    <i>
+                        <ion-icon name="expand-outline"></ion-icon>
+                    </i>
+                </a>
+                <a href="Places.php" class="img-6">
+                    <i>
+                        <ion-icon name="expand-outline"></ion-icon>
+                    </i>
+                </a>
+                <a href="Places.php" class="img-7">
+                    <i>
+                        <ion-icon name="expand-outline"></ion-icon>
+                    </i>
+                </a>
+                <a href="Places.php" class="img-8">
+                    <i>
+                        <ion-icon name="expand-outline"></ion-icon>
+                    </i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<hr>
+<div class="carousel-inner" style="margin-top: 0px;margin-bottom: 0px " id="hotel">
+    <img src="img/23.jpg" height="700px" width="100%">
+    <div>
+        <div class="container carousel-caption" style="margin-left: -80px">
+            <br>
+            <h2 class="text-center" style="margin-top:-600px ">Booking of hotels</h2> <br>
+            <h3 style="background-color: #c82333;"><i class="fa fa-hotel"></i> Hotel</h3>
+            <form class="bg-white" action="rooms.php" method="post">
+                <br>
+                <h3 style="color: #c82333;font-size:40px;font-family: Andalus" class="text-center">Find the best
+                    hotels</h3>
+
+                <div class="row">
+                    <div class="col-md px-md-5 text-left">
+                        <label style="color: #1d2124;font-family: Andalus ;font-size: 30px">Select City</label>
+                        <select class="form-control" class="input-group" name="City"
+                                style="font-family: Andalus;font-size: 30px;width: 470px;border-color: #1d2124">
+                            <option value="Paris">Paris</option>
+                            <option value="London">London</option>
+                            <option value="Dubai">Dubai</option>
+                            <option value="Istanbul">Istanbul</option>
+                        </select>
+                    </div>
+                    <div class="col-md px-md"><label style="color: #1d2124;font-family: Andalus ;font-size: 30px">Room
+                        Type</label>
+                        <select class="form-control" class="input-group" name="Type"
+                                style="font-family: Andalus;font-size: 30px;width: 470px;border-color: #1d2124">
+                            <option value="Single">Single Room</option>
+                            <option value="Double">Double Room</option>
+                            <option value="Suite">Suite Room</option>
+                            <option value="Twin">Twin Room</option>
+                        </select>
+                    </div>
+                </div>
+                <br><br>
+                <div class="row" style="color: #1d2124;font-family: Andalus ;font-size: 30px">
+                    <div class="col-md px-md-5">
+                        <label>Check In</label>
+                        <input type="date" class="input-group" name="CheckIn"
+                               style="font-family: Andalus;font-size: 30px ">
+                    </div>
+                    <div class="col-md px-md-5">
+                        <label>Check Out</label>
+                        <input type="date" class="input-group" name="CheckOut"
+                               style="font-family: Andalus;font-size: 30px;">
+                    </div>
+                </div>
+                <div class="row"></div>
+                <input type="submit" name="submit1" class="btn btn-lg btn-outline-light" value="Search and find Hotel"
+                       style="color: #c82333 ;border-color: #c82333; margin-top: 50px">
+                <br>
+                <br>
+            </form>
+        </div>
+    </div>
+
+</div>
+<hr>
+<section style="margin-top: 50px">
+    <h1 class="text-center">Our Team</h1>
+    <div class="team">
+        <div class="container">
+            <div class="card">
+                <div class="imgBx">
+                    <img src="img/41r0oAaPp0L._AC_SY355_.jpg">
+                </div>
+                <div class="content">
+                    <h3>Haytham Waleed</h3>
+                    <h6>Manger</h6>
+                    <div style="color: #f1c30f ">
+                        <i class="fa fa-envelope fa-2x" ></i>
+                        <i class="fa fa-facebook fa-2x" ></i>
+                        <i class="fa fa-twitter fa-2x" ></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="imgBx">
+                    <img src="img/41mSIgdsHvL.jpg">
+                </div>
+                <div class="content">
+                    <h3>Menna Khayat</h3>
+                    <h6>Front End Designer</h6>
+                    <div style="color: #f1c30f">
+                        <i class="fa fa-envelope fa-2x"></i>
+                        <i class="fa fa-facebook fa-2x"></i>
+                        <i class="fa fa-twitter fa-2x"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="imgBx">
+                    <img src="img/41jLBhDISxL._AC_SY355_.jpg">
+                </div>
+                <div class="content">
+                    <h3>Nabeel kayed</h3>
+                    <h6>Back End Designer</h6>
+                    <div style="color: #f1c30f">
+                        <i class="fa fa-envelope fa-2x"></i>
+                        <i class="fa fa-facebook fa-2x"></i>
+                        <i class="fa fa-twitter fa-2x"></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="number text-center" id="test">
+    <br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 cols-sm-7">
+                <i class="fa fa-plane fa-5x"></i>
+                <p class="counter " style="font-size: 50px">200</p>
+                <h3 class="color-aa">+Ticket</h3>
+            </div>
+            <div class="col-md-3 cols-sm-7">
+                <i class="fa fa-hotel fa-5x"></i>
+                <p class="counter" style="font-size: 50px">596</p>
+                <h3 class="color-aa">+Room</h3>
+            </div>
+            <div class="col-md-3 cols-sm-7">
+                <i class="fa fa-map fa-5x"></i>
+                <p class="counter" style="font-size: 50px">350</p>
+                <h3 class="color-aa">+Places</h3>
+            </div>
+            <div class="col-md-3 cols-sm-7">
+                <i class="fa fa-anchor fa-5x"></i>
+                <p class="counter " style="font-size: 50px">139</p>
+                <h3 class="color-aa">+Adventure</h3>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+</body>
+<script>
+    $('.counter').counterUp({
+        delay: 10,
+        time: 1000
+    });
+</script>
+
+</html>
